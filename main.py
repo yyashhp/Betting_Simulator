@@ -1,7 +1,23 @@
 
-def main():
-    print("hi")
+import pygame
 
 
-if __name__ == "__main__":
-    main()
+
+if __name__ == '__main__':
+
+    SCREEN_HEIGHT = 500
+    #check
+    SCREEN_WIDTH = 800
+
+    screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
+    pygame.display.set_caption('Button Demo')
+
+    run = True
+    while run:
+
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                run = False
+        pygame.display.update()
+
+    pygame.quit()
